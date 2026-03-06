@@ -70,11 +70,11 @@ export default function WeatherCard({ weather, hourly, daily }) {
 
               <div className="precip">
                 {hourly.rain?.[index] > 0 ? (
-                  <span className="rain">
+                  <span >
                     <WiRainMix /> {hourly.rain[index]}mm
                   </span>
                 ) : hourly.snow?.[index] > 0 ? (
-                  <span className="snow">
+                  <span>
                     <FaRegSnowflake /> {hourly.snow[index]}mm
                   </span>
                 ) : (

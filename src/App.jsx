@@ -12,16 +12,14 @@ function App() {
 
   const { loading, weather, theme, hourly, daily } = useWeather(city);
 
-  console.log("weather", weather);
-  console.log("hour", hourly);
-  console.log("daily", daily);
+  // console.log("weather", weather);
+  // console.log("hour", hourly);
+  // console.log("daily", daily);
 
   return (
     <Suspense fallback={<Loader />}>
-      <div className={"night"}>
-        <WeatherBackground theme={"night"} />
-      {/* <div className={theme}>
-        <WeatherBackground theme={theme} /> */}
+      <div className={theme}>
+        <WeatherBackground theme={theme} />
         <Navbar setCity={setCity} />
         {loading && <Loader />}
         <WeatherCard hourly={hourly} weather={weather} daily={daily} />
